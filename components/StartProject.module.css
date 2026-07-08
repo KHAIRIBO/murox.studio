@@ -1,0 +1,228 @@
+.section {
+  padding: 8rem 0 9rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+/* Top border line */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 197, 24, 0.5), transparent);
+}
+
+/* Large glowing background text */
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 14rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(245, 197, 24, 0.06);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Glow orbs */
+.glowLeft {
+  position: absolute;
+  top: 30%;
+  left: -8%;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 197, 24, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.glowRight {
+  position: absolute;
+  bottom: 10%;
+  right: -8%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Inner content */
+.inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-yellow);
+  padding: 0.35rem 1rem;
+  border: 1px solid rgba(245, 197, 24, 0.25);
+  border-radius: var(--radius-full);
+  background: rgba(245, 197, 24, 0.05);
+}
+
+.eyebrow svg {
+  width: 12px;
+  height: 12px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  max-width: 800px;
+}
+
+.heading span {
+  color: var(--accent-yellow);
+  display: block;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* Action row */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.05rem 2.75rem;
+  background: var(--accent-yellow);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btnPrimary:hover {
+  background: var(--accent-yellow-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(245, 197, 24, 0.45);
+}
+
+.btnPrimary svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition);
+}
+
+.btnPrimary:hover svg {
+  transform: translateX(4px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.05rem 2.25rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.btnSecondary:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.btnSecondary svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Info pills */
+.infoPills {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+.pillDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-yellow);
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 6rem 0 7rem;
+  }
+  .heading {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+    max-width: 340px;
+  }
+  .infoPills {
+    gap: 1.25rem;
+  }
+}
