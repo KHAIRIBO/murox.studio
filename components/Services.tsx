@@ -211,7 +211,7 @@ export default function Services() {
 
         {/* Call to action */}
         <div className={styles.footerCta}>
-          <a href="#contact" className={styles.ctaButton} id="services-cta-start-project">
+          <a href="/contact" className={styles.ctaButton} id="services-cta-start-project">
             Start Your Project
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>

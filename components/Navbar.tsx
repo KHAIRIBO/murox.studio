@@ -24,7 +24,7 @@ export default function Navbar() {
         <li><Link href="#blog" id="nav-blog">Blog</Link></li>
       </ul>
 
-      <Link href="#contact" className={styles.ctaBtn} id="cta-start-project">
+      <Link href="/contact" className={styles.ctaBtn} id="cta-start-project">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2a2.94 2.94 0 00-3-3z"/>
           <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/>

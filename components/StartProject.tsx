@@ -37,11 +37,9 @@ export default function StartProject() {
           {/* CTA Buttons */}
           <div className={styles.actions}>
             <a
-              href="https://www.instagram.com/murox.studio/"
+              href="/contact"
               className={styles.btnPrimary}
               id="contact-start-project-btn"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Start Your Project
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
