@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     }
 
     // Insert into Supabase
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('project_requests')
       .insert([
         {
@@ -48,14 +48,13 @@ export async function POST(request: Request) {
           status: 'new'
         }
       ])
-      .select()
 
     if (error) {
       console.error('Supabase error:', error)
       return NextResponse.json({ error: error.message }, { status: 500 })
     }
 
-    return NextResponse.json({ success: true, data }, { status: 201 })
+    return NextResponse.json({ success: true }, { status: 201 })
   } catch (error: any) {
     console.error('API Contact route error:', error)
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
