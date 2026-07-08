@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from './Footer.module.css'
 
 interface LinkItem {
@@ -57,13 +56,7 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <div className={styles.brandLogo}>
-              <Image
-                src="/logo.png"
-                alt="murox.studio logo"
-                width={32}
-                height={32}
-                style={{ objectFit: 'contain' }}
-              />
+              <div className={styles.brandIcon}>MX</div>
               <span className={styles.brandName}>murox.studio</span>
             </div>
             <p className={styles.brandTagline}>
