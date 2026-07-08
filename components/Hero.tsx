@@ -4,10 +4,8 @@ import styles from './Hero.module.css'
 const pillLinks = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Careers', href: '#careers' },
-  { label: 'Privacy Policy', href: '#privacy' },
-  { label: 'Github', href: 'https://github.com/KHAIRIBO/murox.studio' },
-  { label: 'Support', href: '#support' },
+  { label: 'Instagram', href: 'https://www.instagram.com/murox.studio/' },
+  { label: 'Support', href: '#footer' },
 ]
 
 export default function Hero() {
