@@ -94,6 +94,7 @@ export default function ContactPage() {
   const [selectedBudget, setSelectedBudget] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const toggleType = (id: string) => {
     setSelectedTypes(prev =>
@@ -103,12 +104,70 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setError('')
+    
+    const formData = new FormData(e.currentTarget)
+    const firstName = formData.get('firstName') as string
+    const lastName = formData.get('lastName') as string
+    const howKnow = formData.get('howKnow') as string
+    const details = formData.get('details') as string
+    const email = formData.get('email') as string
+    const whatsapp = formData.get('whatsapp') as string
+    const instagram = formData.get('instagram') as string
+
+    if (!firstName || !lastName || !howKnow) {
+      setError('Please fill in all required fields.')
+      return
+    }
+
+    if (!selectedTypes.length) {
+      setError('Please select at least one project type.')
+      return
+    }
+
+    if (!selectedBudget) {
+      setError('Please select an estimated budget.')
+      return
+    }
+
+    if (!email && !whatsapp && !instagram) {
+      setError('Please provide at least one contact method (Email, WhatsApp, or Instagram).')
+      return
+    }
+
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1400))
-    setLoading(false)
-    setSubmitted(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          howKnow,
+          projectTypes: selectedTypes,
+          budget: selectedBudget,
+          details,
+          email,
+          whatsapp,
+          instagram,
+        }),
+      })
+
+      const data = await res.json()
+      if (!res.ok) {
+        throw new Error(data.error || 'Something went wrong. Please try again.')
+      }
+
+      setSubmitted(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } catch (err: any) {
+      setError(err.message || 'Failed to submit request.')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } finally {
+      setLoading(false)
+    }
   }
+
 
   if (submitted) {
     return (
@@ -170,6 +229,16 @@ export default function ContactPage() {
 
           {/* ── FORM CARD ── */}
           <form className={styles.formCard} onSubmit={handleSubmit} noValidate>
+            {error && (
+              <div className={styles.errorBox}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ width: '20px', height: '20px', flexShrink: 0 }}>
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <span>{error}</span>
+              </div>
+            )}
 
             {/* Name row */}
             <div className={styles.row}>
