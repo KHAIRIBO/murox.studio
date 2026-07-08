@@ -26,7 +26,7 @@ export default function About() {
             Who We <span>Are</span>
           </h2>
           <p className={styles.desc}>
-            At murox.studio, we are a group of passionate designers, engineers, and strategists dedicated to crafting futuristic and secure digital solutions. We combine advanced AI technology with top-tier cybersecurity practices to bring your visions to life safely and beautifully.
+            At murox.studio, we are web and design web developers, providing complete website creation, custom PC setups, and gaming solutions help.
           </p>
           <div className={styles.stats}>
             <div className={styles.statItem}>
@@ -39,7 +39,7 @@ export default function About() {
             </div>
             <div className={styles.statItem}>
               <span className={styles.statVal}>24/7</span>
-              <span className={styles.statLabel}>Secured</span>
+              <span className={styles.statLabel}>Support</span>
             </div>
           </div>
         </div>
