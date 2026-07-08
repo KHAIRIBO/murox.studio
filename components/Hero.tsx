@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Hero.module.css'
 
@@ -135,14 +136,16 @@ export default function Hero() {
             <span className={styles.cornerBL} aria-hidden="true" />
             <span className={styles.cornerBR} aria-hidden="true" />
 
-            {/* Dev GIF — changes every hour */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            {/* Dev GIF — changes every hour; unoptimized keeps the animation */}
+            <Image
               key={currentGif.src}
               src={currentGif.src}
               alt={currentGif.label}
+              width={600}
+              height={450}
+              unoptimized
               className={styles.devGif}
-              loading="eager"
+              priority
             />
 
             {/* Gradient overlay at bottom */}
