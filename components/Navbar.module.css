@@ -20,6 +20,11 @@
   text-decoration: none;
 }
 
+.logoImg {
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+
 .logoIcon {
   width: 36px;
   height: 36px;
@@ -112,5 +117,18 @@
   }
   .menuBtn {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
+  .logoText {
+    display: none;
+  }
+  .ctaBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }

@@ -26,7 +26,7 @@ export default function About() {
             Who We <span>Are</span>
           </h2>
           <p className={styles.desc}>
-            At murox.studio, we are web and design web developers, providing complete website creation, custom PC setups, and gaming solutions help.
+            At murox.studio, we are a team of passionate web developers, UI/UX designers, and digital creators dedicated to building exceptional online experiences. We specialize in custom website development, responsive web design, high-performance PC builds, and gaming technology solutions. Our mission is to combine creativity, innovation, and technical expertise to deliver fast, modern, and scalable solutions that help businesses and individuals succeed in the digital world.
           </p>
           <div className={styles.stats}>
             <div className={styles.statItem}>

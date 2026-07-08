@@ -1,11 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   return (
     <nav className={styles.navbar} role="navigation" aria-label="Main navigation">
       <Link href="/" className={styles.logo} id="site-logo">
-        <div className={styles.logoIcon}>MX</div>
+        <Image
+          src="/logo.png"
+          alt="murox.studio logo"
+          width={40}
+          height={40}
+          className={styles.logoImg}
+          priority
+        />
         <span className={styles.logoText}>murox.studio</span>
       </Link>
 

@@ -1,16 +1,31 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#080808',
+}
+
 export const metadata: Metadata = {
-  title: 'murox.studio — Next-Gen Digital Studio',
-  description: 'murox.studio provides cutting-edge digital solutions powered by AI and modern technology. Build smarter, faster, and better.',
-  keywords: ['murox', 'studio', 'digital', 'AI', 'technology', 'cyberpunk', 'design'],
+  metadataBase: new URL('https://murox.studio'),
+  title: 'murox.studio — Custom PC Setups, Web & Game Solutions',
+  description: 'At murox.studio, we are web and design web developers providing premium website creation, custom PC setups, and gaming solutions help.',
+  keywords: ['murox', 'murox studio', 'web developer', 'web designer', 'PC setup', 'gaming solutions', 'PC help'],
   authors: [{ name: 'murox.studio' }],
   openGraph: {
-    title: 'murox.studio — Next-Gen Digital Studio',
-    description: 'Cutting-edge digital solutions powered by AI and modern technology.',
+    title: 'murox.studio — Custom PC Setups, Web & Game Solutions',
+    description: 'We are web and design web developers providing website creation, custom PC setups, and gaming solutions help.',
     type: 'website',
     url: 'https://murox.studio',
+    images: [
+      {
+        url: '/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'murox.studio logo',
+      }
+    ]
   },
 }
 
