@@ -37,7 +37,7 @@ export default function Hero() {
           width={640}
           height={780}
           priority
-          quality={90}
+          style={{ height: 'auto' }}
         />
       </div>
 
