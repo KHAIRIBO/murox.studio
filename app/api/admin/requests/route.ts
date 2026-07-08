@@ -9,10 +9,9 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const passcode = process.env.DB_RPC_PASSCODE || ''
     const { data, error } = await supabase
-      .from('project_requests')
-      .select('*')
-      .order('created_at', { ascending: false })
+      .rpc('get_project_requests', { passcode })
 
     if (error) {
       console.error('Supabase error:', error)
