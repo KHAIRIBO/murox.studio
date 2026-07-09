@@ -6,7 +6,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
-    // Project-level rule overrides
+    // Project-level rujljkljle overrides
     rules: {
       // Using next/image with unoptimized prop for animated GIFs is intentional
       "@next/next/no-img-element": "off",
