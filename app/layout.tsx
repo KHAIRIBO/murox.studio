@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     siteName: 'murox.studio',
     images: [
       {
-        url: '/logo.png',
-        width: 512,
-        height: 512,
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
         alt: 'murox.studio logo',
       }
     ]
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'murox.studio — Custom PC Setups, Web & Game Solutions',
     description: 'Premium website creation, custom PC setups, and gaming solutions.',
-    images: ['/logo.png'],
+    images: ['/og-image.png'],
   },
 }
 
