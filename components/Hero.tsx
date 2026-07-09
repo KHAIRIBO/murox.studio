@@ -18,22 +18,31 @@ const pillLinks = [
    ─────────────────────────────────────────────────────────────────── */
 const devGifs = [
   {
-    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/coding.gif",
-    label: "Coding",
+    src: 'https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif',
+    label: 'Developer in the zone',
   },
   {
-    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/programmer.gif",
-    label: "Developer",
+    src: 'https://media.giphy.com/media/ZVik7pIo9ZSM6X2BpM/giphy.gif',
+    label: 'Typing code fast',
   },
   {
-    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/matrix.gif",
-    label: "Matrix",
+    src: 'https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif',
+    label: 'Hacker vibes',
   },
   {
-    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/hacker.gif",
-    label: "Cyber Security",
+    src: 'https://media.giphy.com/media/RDZo7znAdn2u7sAcWH/giphy.gif',
+    label: 'Matrix code',
+  },
+  {
+    src: 'https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif',
+    label: 'Night-mode coding',
+  },
+  {
+    src: 'https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif',
+    label: 'Fullstack development',
   },
 ]
+
 
 const ONE_HOUR_MS = 60 * 60 * 1000
 
