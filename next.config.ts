@@ -34,6 +34,11 @@ const nextConfig: NextConfig = {
         hostname: "media4.giphy.com",
         pathname: "/media/**",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/**",
+      },
     ],
   },
 };

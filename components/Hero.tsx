@@ -18,28 +18,20 @@ const pillLinks = [
    ─────────────────────────────────────────────────────────────────── */
 const devGifs = [
   {
-    src: 'https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif',
-    label: 'Developer in the zone',
+    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/coding.gif",
+    label: "Coding",
   },
   {
-    src: 'https://media.giphy.com/media/ZVik7pIo9ZSM6X2BpM/giphy.gif',
-    label: 'Typing code fast',
+    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/programmer.gif",
+    label: "Developer",
   },
   {
-    src: 'https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif',
-    label: 'Hacker vibes',
+    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/matrix.gif",
+    label: "Matrix",
   },
   {
-    src: 'https://media.giphy.com/media/RDZo7znAdn2u7sAcWH/giphy.gif',
-    label: 'Matrix code',
-  },
-  {
-    src: 'https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif',
-    label: 'Night-mode coding',
-  },
-  {
-    src: 'https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif',
-    label: 'Fullstack development',
+    src: "https://raw.githubusercontent.com/saadeghi/files/main/gifs/hacker.gif",
+    label: "Cyber Security",
   },
 ]
 
@@ -120,8 +112,8 @@ export default function Hero() {
           {/* CTA */}
           <Link href="/contact" className={styles.heroCta} id="hero-cta-start-project">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2a2.94 2.94 0 00-3-3z"/>
-              <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/>
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2a2.94 2.94 0 00-3-3z" />
+              <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" />
             </svg>
             Start a Project
           </Link>
