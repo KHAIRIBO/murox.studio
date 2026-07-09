@@ -11,7 +11,8 @@
   align-items: stretch;
   overflow: hidden;
   background: var(--bg-primary);
-  padding-top: 5rem; /* space for fixed navbar */
+  padding-top: 5rem;
+  /* space for fixed navbar */
 }
 
 /* ---- Background grid ---- */
@@ -52,8 +53,15 @@
 }
 
 @keyframes orbFloat {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-30px) scale(1.05); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-30px) scale(1.05);
+  }
 }
 
 /* ---- Scan line decorative ---- */
@@ -69,10 +77,23 @@
 }
 
 @keyframes scan {
-  0%  { top: 5%;  opacity: 0; }
-  5%  { opacity: 1; }
-  95% { opacity: 1; }
-  100% { top: 95%; opacity: 0; }
+  0% {
+    top: 5%;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 95%;
+    opacity: 0;
+  }
 }
 
 /* ==========================================
@@ -102,8 +123,15 @@
 }
 
 @keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* AI Status Chip */
@@ -130,8 +158,15 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
 }
 
 .aiChipText {
@@ -176,13 +211,27 @@
 }
 
 @keyframes slideInTop {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideInBottom {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Description Block */
@@ -274,8 +323,15 @@
 }
 
 @keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .gifCard {
@@ -297,8 +353,15 @@
 }
 
 @keyframes cardFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 /* Cyber corner brackets */
@@ -313,25 +376,29 @@
 }
 
 .cornerTL {
-  top: 10px; left: 10px;
+  top: 10px;
+  left: 10px;
   border-top: 2px solid var(--accent-cyan);
   border-left: 2px solid var(--accent-cyan);
 }
 
 .cornerTR {
-  top: 10px; right: 10px;
+  top: 10px;
+  right: 10px;
   border-top: 2px solid var(--accent-yellow);
   border-right: 2px solid var(--accent-yellow);
 }
 
 .cornerBL {
-  bottom: 10px; left: 10px;
+  bottom: 10px;
+  left: 10px;
   border-bottom: 2px solid var(--accent-yellow);
   border-left: 2px solid var(--accent-yellow);
 }
 
 .cornerBR {
-  bottom: 10px; right: 10px;
+  bottom: 10px;
+  right: 10px;
   border-bottom: 2px solid var(--accent-cyan);
   border-right: 2px solid var(--accent-cyan);
 }
@@ -353,7 +420,7 @@
   left: 0;
   right: 0;
   height: 45%;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -409,8 +476,15 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-  to   { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+
+  to {
+    opacity: 0.4;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .scrollLine {
@@ -421,8 +495,15 @@
 }
 
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .scrollLabel {
